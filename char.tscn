@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://rk77kbykoun"]
+
+[ext_resource type="Texture2D" uid="uid://de45pipr6nmv3" path="res://char.png" id="1_2af1m"]
+[ext_resource type="Script" path="res://runaround.gd" id="1_hvgqs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04ngu"]
+radius = 18.0
+height = 100.0
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(179, 202)
+script = ExtResource("1_hvgqs")
+
+[node name="Char" type="Sprite2D" parent="."]
+position = Vector2(3, -10.0001)
+scale = Vector2(0.103663, 0.115077)
+texture = ExtResource("1_2af1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, -4)
+shape = SubResource("CapsuleShape2D_04ngu")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d158aibnwrmc1"]
+
+[ext_resource type="PackedScene" uid="uid://dwic7hqgo8rsj" path="res://bg.tscn" id="1_74s7c"]
+[ext_resource type="PackedScene" uid="uid://hdmtdtkag766" path="res://pumpkin.tscn" id="2_2lbjc"]
+[ext_resource type="PackedScene" uid="uid://rk77kbykoun" path="res://char.tscn" id="3_2v6w0"]
+[ext_resource type="PackedScene" uid="uid://cwxabuhxl6t1u" path="res://grass.tscn" id="4_5ohna"]
+
+[node name="level1" type="Node2D"]
+
+[node name="Bg" parent="." instance=ExtResource("1_74s7c")]
+
+[node name="Pumpkin" parent="." instance=ExtResource("2_2lbjc")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_2v6w0")]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("4_5ohna")]

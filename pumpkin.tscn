@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://hdmtdtkag766"]
+
+[ext_resource type="Texture2D" uid="uid://wf242ux7igbm" path="res://pumpkin.png" id="1_3sj13"]
+
+[node name="Pumpkin" type="Sprite2D"]
+position = Vector2(273, 462)
+scale = Vector2(0.140748, 0.140748)
+texture = ExtResource("1_3sj13")
