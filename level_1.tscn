@@ -1,19 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://d158aibnwrmc1"]
+[gd_scene load_steps=9 format=3 uid="uid://d158aibnwrmc1"]
 
 [ext_resource type="PackedScene" uid="uid://dwic7hqgo8rsj" path="res://bg.tscn" id="1_74s7c"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_qg1c0"]
 [ext_resource type="PackedScene" uid="uid://hdmtdtkag766" path="res://pumpkin.tscn" id="2_2lbjc"]
 [ext_resource type="PackedScene" uid="uid://rk77kbykoun" path="res://char.tscn" id="3_2v6w0"]
 [ext_resource type="PackedScene" uid="uid://da4ii8mwjq8un" path="res://spikes1.tscn" id="4_1ekrn"]
 [ext_resource type="PackedScene" uid="uid://cwxabuhxl6t1u" path="res://grass1.tscn" id="4_5ohna"]
 [ext_resource type="AudioStream" uid="uid://812fwyctgqrl" path="res://music1.wav" id="5_w7xwx"]
+[ext_resource type="PackedScene" uid="uid://cu4iqplx28vi8" path="res://gloiwy.tscn" id="7_lbikh"]
 
-[node name="level1" type="Node2D"]
+[node name="level1" type="Node2D" groups=["levels"]]
+script = ExtResource("1_qg1c0")
 
 [node name="Bg" parent="." instance=ExtResource("1_74s7c")]
 
-[node name="Pumpkin" parent="." instance=ExtResource("2_2lbjc")]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_2v6w0")]
+[node name="player" parent="." instance=ExtResource("3_2v6w0")]
 
 [node name="Node2D" parent="." instance=ExtResource("4_1ekrn")]
 position = Vector2(35, -96)
@@ -25,3 +26,43 @@ position = Vector2(558, 90)
 stream = ExtResource("5_w7xwx")
 autoplay = true
 bus = &"background"
+
+[node name="Node2D" parent="Music1" instance=ExtResource("7_lbikh")]
+position = Vector2(-540, -113)
+
+[node name="pumpkinae" type="Node2D" parent="."]
+
+[node name="Pumpkin1" parent="pumpkinae" instance=ExtResource("2_2lbjc")]
+position = Vector2(225, 390)
+
+[node name="Pumpkin2" parent="pumpkinae" instance=ExtResource("2_2lbjc")]
+position = Vector2(344, 390)
+
+[node name="Pumpkin3" parent="pumpkinae" instance=ExtResource("2_2lbjc")]
+position = Vector2(465, 392)
+
+[node name="Pumpkin4" parent="pumpkinae" instance=ExtResource("2_2lbjc")]
+position = Vector2(905, 392)
+
+[node name="Pumpkin5" parent="pumpkinae" instance=ExtResource("2_2lbjc")]
+position = Vector2(811, 394)
+
+[node name="Pumpkin6" parent="pumpkinae" instance=ExtResource("2_2lbjc")]
+position = Vector2(997, 394)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 144.0
+offset_top = 16.0
+offset_right = 663.0
+offset_bottom = 53.0
+theme_override_font_sizes/normal_font_size = 26
+text = "The blue of the sky burns in your irises."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 22.0
+offset_top = 554.0
+offset_right = 1035.0
+offset_bottom = 637.0
+theme_override_font_sizes/normal_font_size = 26
+text = "The earth needs the sauce of CNN, the salad that is always free, let it be the adipiscing salad, but not the salad itself.
+"

@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://qxhc06ens1ng"]
+
+[ext_resource type="Script" path="res://level_3.gd" id="1_pjldj"]
+[ext_resource type="PackedScene" uid="uid://dwic7hqgo8rsj" path="res://bg.tscn" id="2_3kgq5"]
+[ext_resource type="PackedScene" uid="uid://hdmtdtkag766" path="res://pumpkin.tscn" id="4_vrdkc"]
+[ext_resource type="PackedScene" uid="uid://rk77kbykoun" path="res://char.tscn" id="5_5uvoa"]
+[ext_resource type="AudioStream" uid="uid://812fwyctgqrl" path="res://music1.wav" id="6_pxf6u"]
+[ext_resource type="PackedScene" uid="uid://bwxheg2w1fbki" path="res://grass5.tscn" id="7_b0u7d"]
+[ext_resource type="PackedScene" uid="uid://cu4iqplx28vi8" path="res://gloiwy.tscn" id="7_nhjrx"]
+
+[node name="level5" type="Node2D" groups=["levels"]]
+script = ExtResource("1_pjldj")
+
+[node name="Bg" parent="." instance=ExtResource("2_3kgq5")]
+
+[node name="Pumpkin" parent="." instance=ExtResource("4_vrdkc")]
+position = Vector2(645, 348)
+
+[node name="player" parent="." instance=ExtResource("5_5uvoa")]
+position = Vector2(98, 241)
+
+[node name="Music1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(558, 90)
+stream = ExtResource("6_pxf6u")
+autoplay = true
+bus = &"background"
+
+[node name="Node2D" parent="." instance=ExtResource("7_nhjrx")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 58.0
+offset_top = 4.0
+offset_right = 780.0
+offset_bottom = 44.0
+theme_override_font_sizes/normal_font_size = 20
+text = "And, just as a bee, one day as you have complyed, it can all go away"
+
+[node name="StaticBody2D" parent="." instance=ExtResource("7_b0u7d")]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 263.0
+offset_top = 564.0
+offset_right = 1135.0
+offset_bottom = 604.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Until the team is free, the members are not, the weekend is, it is not accepted, it is ugly
+"

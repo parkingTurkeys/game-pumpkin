@@ -3,13 +3,7 @@
 [ext_resource type="Script" path="res://spikes.gd" id="1_4ap1n"]
 [ext_resource type="Texture2D" uid="uid://do64ed4bu87p8" path="res://spikes.png" id="1_hpcsu"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_4ap1n")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(404, 630, 480, 544, 525, 624, 582, 482, 633, 626, 696, 528, 718, 619, 740, 562, 761, 634, 413, 637)
+[node name="Spike" type="Node2D"]
 
 [node name="Spikes" type="Sprite2D" parent="."]
 position = Vector2(586, 546)
@@ -17,8 +11,11 @@ scale = Vector2(0.246638, 0.252089)
 texture = ExtResource("1_hpcsu")
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_4ap1n")
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(404, 630, 480, 544, 525, 624, 582, 482, 633, 626, 696, 528, 718, 619, 740, 562, 761, 634, 413, 637)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(7, -16)
+scale = Vector2(0.992529, 1.02921)
+polygon = PackedVector2Array(423.784, 625.794, 480, 544, 525, 624, 582, 482, 633, 626, 696, 528, 718, 619, 740, 562, 761, 634, 413, 637)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

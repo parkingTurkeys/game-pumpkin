@@ -13,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bx6h84746yi4g" path="res://2024_10_25_11w_Kleki.png" id="6_riv3x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04ngu"]
-radius = 15.0
-height = 98.0
+radius = 6.0
+height = 32.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g0aav"]
 animations = [{
@@ -81,13 +81,13 @@ position = Vector2(179, 202)
 script = ExtResource("1_hvgqs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(13, -4)
+position = Vector2(29, 32)
 shape = SubResource("CapsuleShape2D_04ngu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(11, 3)
-scale = Vector2(0.279921, 0.303306)
+position = Vector2(29.6259, 32.3403)
+scale = Vector2(0.101683, 0.1205)
 sprite_frames = SubResource("SpriteFrames_g0aav")
 animation = &"right"
-frame_progress = 0.83559
+frame_progress = 0.319786
 speed_scale = 1.4

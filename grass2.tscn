@@ -4,19 +4,20 @@
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 4)
+polygon = PackedVector2Array(23, 16, 22, 418, 187, 436, 261, 423, 395, 444, 447, 428, 1012, 440, 1014, 463, 14, 470, 13, 533, 112, 539, 294, 533, 531, 546, 609, 518, 653, 535, 843, 533, 844, 531, 1053, 532, 1086, 407, 1146.05, 364.693, 432, 357, 435, 327, 528, 334, 633, 328, 756, 339, 865, 332, 1031, 340, 1150, 329, 1144, 0, 1274, 0, 1255, 689, -63, 674, -85, 13)
+
 [node name="Grass" type="Sprite2D" parent="."]
 position = Vector2(603, 615)
 texture = ExtResource("1_hnv0q")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(23, 16, 14, 527, 523, 533, 527, 421, 732, 422, 733, 276, 854, 277, 860.578, 432.936, 896, 429, 899, 531, 1147, 534, 1144, 0, 1274, 0, 1255, 689, -63, 674, -85, 13)
-
 [node name="Grass2" type="Sprite2D" parent="."]
-position = Vector2(713.25, 502)
-scale = Vector2(0.284358, 1)
+position = Vector2(570.875, 455.75)
+scale = Vector2(0.674449, 0.226115)
 texture = ExtResource("1_hnv0q")
 
 [node name="Grass3" type="Sprite2D" parent="."]
-position = Vector2(795, 356)
-scale = Vector2(0.093394, 1)
+position = Vector2(792, 349)
+scale = Vector2(0.547456, 0.156051)
 texture = ExtResource("1_hnv0q")

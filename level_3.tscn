@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhln3besdr6es"]
+
+[ext_resource type="Script" path="res://level_3.gd" id="1_fuxsg"]
+[ext_resource type="PackedScene" uid="uid://dwic7hqgo8rsj" path="res://bg.tscn" id="1_pcavi"]
+[ext_resource type="PackedScene" uid="uid://hdmtdtkag766" path="res://pumpkin.tscn" id="2_15c06"]
+[ext_resource type="PackedScene" uid="uid://rk77kbykoun" path="res://char.tscn" id="3_yckp3"]
+[ext_resource type="AudioStream" uid="uid://812fwyctgqrl" path="res://music1.wav" id="4_hx85t"]
+[ext_resource type="PackedScene" uid="uid://cu4iqplx28vi8" path="res://gloiwy.tscn" id="5_4srug"]
+[ext_resource type="PackedScene" uid="uid://c3onb25pe5gl4" path="res://grass3.tscn" id="5_jwvnv"]
+
+[node name="level3" type="Node2D" groups=["levels"]]
+script = ExtResource("1_fuxsg")
+
+[node name="Bg" parent="." instance=ExtResource("1_pcavi")]
+
+[node name="Pumpkin" parent="." instance=ExtResource("2_15c06")]
+position = Vector2(804, 215)
+
+[node name="player" parent="." instance=ExtResource("3_yckp3")]
+
+[node name="Music1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(558, 90)
+stream = ExtResource("4_hx85t")
+autoplay = true
+bus = &"background"
+
+[node name="StaticBody2D" parent="." instance=ExtResource("5_jwvnv")]
+
+[node name="Node2D" parent="." instance=ExtResource("5_4srug")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 28.0
+offset_top = 12.0
+offset_right = 908.0
+offset_bottom = 49.0
+theme_override_font_sizes/normal_font_size = 26
+text = "Even the largest mountain can be created from many small pebbles."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 22.0
+offset_top = 554.0
+offset_right = 1035.0
+offset_bottom = 637.0
+theme_override_font_sizes/normal_font_size = 26
+text = "Together with their companions, the mountains will give birth to feathers and great thrusts, and a ridiculous mouse will be born."

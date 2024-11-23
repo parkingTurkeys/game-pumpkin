@@ -5,6 +5,10 @@ func _ready():
 	
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "char":
+
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "player":
+		print("oof")
 		get_tree().reload_current_scene()

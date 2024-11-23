@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwxheg2w1fbki"]
+
+[ext_resource type="Texture2D" uid="uid://brgucdehq5nfp" path="res://grass.png" id="1_fui5w"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(262.75, 615)
+scale = Vector2(0.483295, 1)
+texture = ExtResource("1_fui5w")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(829.376, 11)
+scale = Vector2(0.676047, 1)
+polygon = PackedVector2Array(-100.3, 517, 574.175, 530.461, 578, 674, -86.7001, 682)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(37, 7)
+polygon = PackedVector2Array(23, 16, 14, 527, 550, 532, 549, 610, 551, 675, -63, 674, -85, 13)
+
+[node name="Grass2" type="Sprite2D" parent="."]
+position = Vector2(899.25, 601.75)
+scale = Vector2(0.516705, 0.856688)
+texture = ExtResource("1_fui5w")

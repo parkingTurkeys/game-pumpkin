@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu4iqplx28vi8"]
+
+[ext_resource type="Texture2D" uid="uid://dd8ouktcbankk" path="res://GLOWY.png" id="1_77f3m"]
+[ext_resource type="Script" path="res://gloiwy.gd" id="1_h6pmm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxqhg"]
+size = Vector2(637.074, 707.203)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_h6pmm")
+
+[node name="Glowy" type="Sprite2D" parent="."]
+position = Vector2(1139, 368)
+scale = Vector2(0.304517, 1.11142)
+texture = ExtResource("1_77f3m")
+
+[node name="Area2D" type="Area2D" parent="Glowy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Glowy/Area2D"]
+position = Vector2(223.304, 0.89975)
+shape = SubResource("RectangleShape2D_kxqhg")
+
+[connection signal="body_entered" from="Glowy/Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4skta6nc3uik"]
+
+[ext_resource type="Script" path="res://level_3.gd" id="1_bkl2b"]
+[ext_resource type="PackedScene" uid="uid://dwic7hqgo8rsj" path="res://bg.tscn" id="2_vvr1u"]
+[ext_resource type="PackedScene" uid="uid://hdmtdtkag766" path="res://pumpkin.tscn" id="3_1i02c"]
+[ext_resource type="PackedScene" uid="uid://d1e32y6yker3e" path="res://spikes4.tscn" id="3_675cy"]
+[ext_resource type="PackedScene" uid="uid://rk77kbykoun" path="res://char.tscn" id="4_n8rp5"]
+[ext_resource type="AudioStream" uid="uid://812fwyctgqrl" path="res://music1.wav" id="5_5tk5u"]
+[ext_resource type="PackedScene" uid="uid://cu4iqplx28vi8" path="res://gloiwy.tscn" id="7_irumv"]
+[ext_resource type="PackedScene" uid="uid://dyal5f2n35ncg" path="res://grass4.tscn" id="7_xwkvp"]
+
+[node name="level4" type="Node2D" groups=["levels"]]
+script = ExtResource("1_bkl2b")
+
+[node name="Bg" parent="." instance=ExtResource("2_vvr1u")]
+
+[node name="Spike" parent="Bg" instance=ExtResource("3_675cy")]
+position = Vector2(-866.827, -729.24)
+
+[node name="Pumpkin" parent="." instance=ExtResource("3_1i02c")]
+position = Vector2(645, 348)
+
+[node name="player" parent="." instance=ExtResource("4_n8rp5")]
+position = Vector2(768, 324)
+
+[node name="Music1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(558, 90)
+stream = ExtResource("5_5tk5u")
+autoplay = true
+bus = &"background"
+
+[node name="Node2D" parent="." instance=ExtResource("7_irumv")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 722.0
+offset_bottom = 40.0
+text = "What is this hell, where the unseen is seen agian and the truth sent to the edges of eyes?"
+
+[node name="StaticBody2D" parent="." instance=ExtResource("7_xwkvp")]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="StaticBody2D"]
+offset_left = 22.0
+offset_top = 554.0
+offset_right = 1035.0
+offset_bottom = 637.0
+theme_override_font_sizes/normal_font_size = 26
+text = "There is no such thing as a fear of the casino laoreet.
+"

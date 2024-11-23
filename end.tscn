@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwoveb3bhmrik"]
+
+[ext_resource type="Texture2D" uid="uid://60nm553kik2w" path="res://end.png" id="1_0wq3g"]
+[ext_resource type="AudioStream" path="end.wav" id="2_psuut"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="End" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325)
+scale = Vector2(1.00434, 1.01235)
+texture = ExtResource("1_0wq3g")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(563, 314)
+stream = ExtResource("2_psuut")
+volume_db = 7.829
+autoplay = true
+bus = &"background"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 984.0
+offset_top = 425.0
+offset_right = 1997.0
+offset_bottom = 508.0
+theme_override_font_sizes/normal_font_size = 26
+text = "OF DEMO"
