@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://hdmtdtkag766"]
+[gd_scene load_steps=3 format=3 uid="uid://hdmtdtkag766"]
 
 [ext_resource type="Texture2D" uid="uid://wf242ux7igbm" path="res://pumpkin.png" id="1_3sj13"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iwdk4"]
+radius = 193.24
+
 [node name="Pumpkin" type="Sprite2D"]
-position = Vector2(273, 462)
+position = Vector2(254, 451)
 scale = Vector2(0.140748, 0.140748)
 texture = ExtResource("1_3sj13")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_iwdk4")
+one_way_collision = true

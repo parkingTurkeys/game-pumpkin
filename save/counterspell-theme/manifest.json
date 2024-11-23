@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "counterspell-theme",
+  "theme": {
+    "images": {
+      "theme_frame": "bg.png"
+    },
+    "colors": {
+      "frame": "#90a8e1",
+      "tab_background_text": "#202f53"
+    }
+  }
+}

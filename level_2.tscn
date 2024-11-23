@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp1mxnn1o7li"]
+
+[ext_resource type="PackedScene" uid="uid://dwic7hqgo8rsj" path="res://bg.tscn" id="1_p63hv"]
+[ext_resource type="PackedScene" uid="uid://hdmtdtkag766" path="res://pumpkin.tscn" id="2_gwkm7"]
+[ext_resource type="PackedScene" uid="uid://rk77kbykoun" path="res://char.tscn" id="3_l5ao4"]
+[ext_resource type="PackedScene" uid="uid://cwxabuhxl6t1u" path="res://grass1.tscn" id="4_lorwo"]
+[ext_resource type="AudioStream" uid="uid://812fwyctgqrl" path="res://music1.wav" id="5_8ip76"]
+
+[node name="level1" type="Node2D"]
+
+[node name="Bg" parent="." instance=ExtResource("1_p63hv")]
+
+[node name="Pumpkin" parent="." instance=ExtResource("2_gwkm7")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_l5ao4")]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("4_lorwo")]
+
+[node name="Music1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(558, 90)
+stream = ExtResource("5_8ip76")
+autoplay = true
+bus = &"background"

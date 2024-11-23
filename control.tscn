@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dljcrwy0fykvp"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_holxh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Node"]
+offset_left = 434.0
+offset_top = 274.0
+offset_right = 829.0
+offset_bottom = 389.0
+text = "Play!"
+script = ExtResource("1_holxh")
+
+[connection signal="pressed" from="Node/Button" to="Node/Button" method="_on_play_button_pressed"]

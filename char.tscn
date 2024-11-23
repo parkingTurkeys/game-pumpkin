@@ -1,21 +1,93 @@
-[gd_scene load_steps=4 format=3 uid="uid://rk77kbykoun"]
+[gd_scene load_steps=14 format=3 uid="uid://rk77kbykoun"]
 
-[ext_resource type="Texture2D" uid="uid://de45pipr6nmv3" path="res://char.png" id="1_2af1m"]
 [ext_resource type="Script" path="res://runaround.gd" id="1_hvgqs"]
+[ext_resource type="Texture2D" uid="uid://k3nnks3nnfq1" path="res://2024_10_25_131_Kleki(1).png" id="2_6qe5u"]
+[ext_resource type="Texture2D" uid="uid://dog1qnydkluyv" path="res://2024_10_25_11m_Kleki.png" id="2_8hfdg"]
+[ext_resource type="Texture2D" uid="uid://cm15a6lkpppdd" path="res://2024_10_25_131_Kleki.png" id="3_7riwe"]
+[ext_resource type="Texture2D" uid="uid://dgslqg4liy8du" path="res://2024_10_25_11q_Kleki.png" id="3_hcbq8"]
+[ext_resource type="Texture2D" uid="uid://l38rei0ep22t" path="res://2024_10_25_11t_Kleki.png" id="4_i67vt"]
+[ext_resource type="Texture2D" uid="uid://b4jgye6nwtoi6" path="res://2024_10_25_134_Kleki.png" id="4_ydo41"]
+[ext_resource type="Texture2D" uid="uid://dykogyklgiiol" path="res://2024_10_25_11u_Kleki.png" id="5_2k3hx"]
+[ext_resource type="Texture2D" uid="uid://o7hrhf0nehle" path="res://2024_10_25_135_Kleki.png" id="5_3x8p8"]
+[ext_resource type="Texture2D" uid="uid://dpcrmtbsvi5di" path="res://2024_10_25_136_Kleki.png" id="6_g3ppb"]
+[ext_resource type="Texture2D" uid="uid://bx6h84746yi4g" path="res://2024_10_25_11w_Kleki.png" id="6_riv3x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04ngu"]
-radius = 18.0
-height = 100.0
+radius = 15.0
+height = 98.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0aav"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6qe5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7riwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ydo41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3x8p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g3ppb")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8hfdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hcbq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i67vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2k3hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_riv3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2k3hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i67vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hcbq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8hfdg")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(179, 202)
 script = ExtResource("1_hvgqs")
 
-[node name="Char" type="Sprite2D" parent="."]
-position = Vector2(3, -10.0001)
-scale = Vector2(0.103663, 0.115077)
-texture = ExtResource("1_2af1m")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13, -4)
 shape = SubResource("CapsuleShape2D_04ngu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(11, 3)
+scale = Vector2(0.279921, 0.303306)
+sprite_frames = SubResource("SpriteFrames_g0aav")
+animation = &"right"
+frame_progress = 0.83559
+speed_scale = 1.4
